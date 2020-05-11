@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+    h3 {
+        color: orangered;
+    }
+ body{
+     padding-bottom: 60px;
+     background: url(../../t1.jpg);
+ }
+.card-title {
+    color : rgb(197, 59, 9);
+}
+.icon {
+    padding: 0px;
+    color: white;
+    min-width: 20px;
+}
+h6 {
+    color : purple;
+}
+.col{
+    /* background: url(../../t1.jpg); */
+}
+.card{
+    background-image: linear-gradient(red, yellow, blue);
+}
+#card-button {
+    background : linear-gradient(to right,rgb(150, 2, 150) 0%, rgb(53, 3, 53) 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+
+

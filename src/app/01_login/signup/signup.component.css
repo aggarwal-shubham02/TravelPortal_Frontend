@@ -1,0 +1,55 @@
+ body {
+    background: url(../../n1.jpg);
+     background-repeat: repeat;
+     background-size: 1300px 650px;
+     display: flex;
+     justify-content: center;
+     padding-top: 30px;
+     padding-bottom: 40px;
+     padding-right: 60px;
+ }
+ 
+ .card-title {
+     color: black;
+ }
+ .card{
+    background-image: linear-gradient(red, yellow, blue);
+ }
+ .logo{
+    background-image: url('i3.png');
+    background-color: lightcoral;
+    height: 120px;
+    width: 130px;
+    margin-right: 540px;
+    border-radius: 50%;
+
+}
+ .form-sign-up {
+     width: 100%;
+     max-width: 330px;
+     padding: 15px;
+     margin: 0 auto;
+ }
+ 
+ .btn {
+     background: linear-gradient(to right, rgb(150, 2, 150) 0%, rgb(53, 3, 53) 100%);
+     border: none;
+     color: white;
+     font-weight: 600;
+     padding: 10px 20px;
+     text-align: center;
+     display: inline-block;
+     cursor: pointer;
+     border-radius: 20px;
+ }
+ 
+ a {
+     color: orangered;
+     font-weight: 600;
+ }
+ 
+ label {
+     text-align: left;
+     font-size: 12px;
+     font-weight: 600;
+ }
