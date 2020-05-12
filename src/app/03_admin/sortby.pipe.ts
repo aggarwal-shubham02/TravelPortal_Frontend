@@ -16,10 +16,12 @@ export class SortByPipe implements PipeTransform {
     console.log(column);
     if ((column === '') || (column === 'date')) {
       column = "created_on";
+      // console.log(ticketDetails[0].details.priority.toUpperCase())
       return orderBy(Tickets, [column], [order]);
     }
     else if(column === 'priority'){
       Tickets.sort((a: any, b: any) => {
+        
         if (Priority[a.ticketDetails[0].details.priority.toUpperCase()] < Priority[b.ticketDetails[0].details.priority.toUpperCase()]) {
           return -1;
         } else if (Priority[a.ticketDetails[0].details.priority.toUpperCase()] > Priority[b.ticketDetails[0].details.priority.toUpperCase()]) {

@@ -5,6 +5,7 @@ import { Countries } from 'src/app/models/countries';
 
 @Injectable()
 export class UserService {
+  selectedTicket: any;
 
   constructor(private http: HttpClient) {}
 

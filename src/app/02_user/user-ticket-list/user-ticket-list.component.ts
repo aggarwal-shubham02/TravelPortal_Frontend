@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { user } from 'src/app/models/user.interface';
 import { tickets } from 'src/app/models/tickets.interface';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user-ticket-list',
@@ -18,7 +19,8 @@ export class UserTicketListComponent implements OnInit{
   
   constructor( 
     private router: Router,
-   
+    private route : ActivatedRoute,
+    private userservice : UserService
   ) { }
   
   ngOnInit() {
@@ -29,7 +31,8 @@ export class UserTicketListComponent implements OnInit{
   }
 
    getDetails(id) {
-      this.router.navigateByUrl('/details');
+     console.log(id)
+      this.router.navigate(['/details',JSON.stringify(id)]);
    }
 
 }

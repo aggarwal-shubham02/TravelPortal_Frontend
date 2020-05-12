@@ -47,8 +47,8 @@
                   <td>{{ ticket.details.expenseborne }}</td>
                   <td>{{ ticket.details.approver }}</td>
                   <td>{{ ticket.user }}</td>
-                  <td>-</td>
-                  <td>- </td>
+                  <td>{{ ticket.comments }}</td>
+               <td><a href="{{ ticket.attachements }}">{{ ticket.attachements }}</a></td>
     
                 </tr>
                 
@@ -65,6 +65,7 @@
    </div> -->
     <div class="d-flex justify-content-center mt-3">    
       <!-- <button class="btn mr-3" id="card-button">Submit</button> -->
+      <!-- <button type="button" class="btn mr-3" id="card-button" (click)="onEdit()"><i class="fa fa-pencil icon"></i> Edit </button> -->
 <button class="btn" id="card-button" (click)="backToHome()"><i class="fa fa-arrow-left icon" ></i> Home page</button></div>
         </div>
         

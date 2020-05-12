@@ -56,7 +56,7 @@ export class SignupComponent implements OnInit {
 
     this.firstNameControl=new FormControl('', [Validators.required]);
     this.lastNameControl=new FormControl('', [Validators.required]);
-    this.emailControl=new FormControl('', [Validators.required,Validators.email]);
+    this.emailControl=new FormControl('', [Validators.required,this.emailValidator]);
     this.titleControl=new FormControl('', [Validators.required]);
     this.businessUnitControl=new FormControl('', [Validators.required]);
     this.phoneControl=new FormControl('', [Validators.required,Validators.maxLength(15)]);
@@ -129,7 +129,20 @@ export class SignupComponent implements OnInit {
     }
   }
 
-
+  emailValidator(control: FormControl) { 
+    let email = control.value; 
+    if (email && email.indexOf("@") != -1) { 
+      let [_, domain] = email.split("@"); 
+      if (domain !== "nagarro.com") { 
+        return {
+          emailDomain: {
+            parsedDomain: domain
+          }
+        }
+      }
+    }
+    return null; 
+  }
 
   getCountries(){
     this.loginService.allCountries().

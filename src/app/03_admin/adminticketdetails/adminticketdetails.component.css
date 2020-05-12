@@ -5,10 +5,10 @@
 .custom-file-label {
     font-size: 16px;
 }
-.col{
+body{
     background: url(../../t1.jpg);
 }
-.card{
+.table{
     background-image: linear-gradient(red, yellow, blue);
 }
 #card-button {

@@ -58,8 +58,7 @@
                                         <div class="form-group col-md-6">
                                             From Location:
                                             <select id="fromlocation" class="form-control" formControlName="fromlocation" [ngClass]="getControlValidationClasses(fromlocationControl)">
-                                            <option selected value ="1">Delhi</option>
-                                            <option value ="1">Mumbai</option>
+                                                <option *ngFor="let country of countryInfo" [value]=country.CountryName>{{country.CountryName}}</option>
                                         </select>
                                         </div>
                                     </div>
